@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabeli & Enzo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #fce4ec;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #e91e63;
+            margin: 15px 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .heart {
+            color: #e91e63;
+            font-size: 1.5em;
+            animation: pulse 1.5s infinite;
+        }
+        
+        .date {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ad1457;
+        }
+        
+        .message {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .message p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .photo-container {
+            width: 80%;
+            margin-left: 50px;
+            background-color: white;
+            padding: 7px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo {
+            width: 80%;
+            height: 250px;
+            background-color: #f8bbd0;
+            border-radius: 8px;
+            left:25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .photo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        
+        .photo-placeholder {
+            font-size: 0.9rem;
+            color: #ad1457;
+        }
+        
+        .stickers {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+        
+        .sticker {
+            width: 80px;
+            height: 80px;
+            animation: float 3s infinite ease-in-out;
+        }
+        
+        .sticker:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        .sticker:nth-child(3) {
+            animation-delay: 1s;
+        }
+        
+        .music-player {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .music-player h3 {
+            margin-bottom: 15px;
+            color: #e91edf;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            color: #ad1493da;
+        }
+        
+        .counter {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ad14a0;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            color: #c01ee9;
+            opacity: 0.5;
+            animation: floatUp 10s linear infinite;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-container" id="hearts-container"></div>
+    
+    <div class="header">
+        <h1>Isabeli <span class="heart">♥</span> Enzo</h1>
+        <div class="date">Desde 07/02/2025</div>
+    </div>
+    
+    <div class="message">
+        <p>Enzo, meu bem...</p>
+            <p>Hoje completamos 50 dias desde que nos conhecemos, e cada um desses dias foi especial ao teu lado...</p>  
+            <p>Que esses 50 dias sejam apenas o começo de milhares de dias,meses, anos e uma vida inteira juntos <3</p>  
+            <p>Este site é uma pequena reunião dos nossos momentos, aqueles que quero eternizar para sempre :)</p>   
+    </div>
+    
+    <div class="gallery">
+        <h2 style="text-align: center; margin-bottom: 15px; color: #e91e63;">Nossos momentos</h2>
+        
+        <div class="photo-container">
+            <div class="photo">
+                <img src="A3CC05EB-0FCD-4D72-B6F2-F66275ECB88D.JPG" alt="Nosso primeiro encontro" />
+            </div>
+        </div>
+        
+        <div class="photo-container">
+            <div class="photo">
+                <img src="IMG_3148.jpg" alt="Momentos especiais" />
+            </div>
+        </div>
+        
+        <div class="photo-container">
+            <div class="photo">
+                <img src="IMG_3121.jpg" alt="Juntos e felizes" />
+            </div>
+        </div>
+    </div>
+    
+    <div class="stickers">
+        <div class="sticker">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50,20 C47,10 38,5 30,5 C15,5 5,15 5,30 C5,60 50,90 50,90 C50,90 95,60 95,30 C95,15 85,5 70,5 C62,5 53,10 50,20 Z" fill="#e91e63"/>
+            </svg>
+        </div>
+        <div class="sticker">
+            <img src="png-transparent-snoopy-hugging-heart-illustration-snoopy-charlie-brown-wood-valentine-s-day-peanuts-snoopy-love-white-heart.png" style="height: 50%; ">
+        </div>
+        <div class="sticker">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50,20 C47,10 38,5 30,5 C15,5 5,15 5,30 C5,60 50,90 50,90 C50,90 95,60 95,30 C95,15 85,5 70,5 C62,5 53,10 50,20 Z" fill="#e91e63"/>
+                <text x="50" y="55" font-size="20" text-anchor="middle" fill="white">I + E</text>
+            </svg>
+        </div>
+    </div> 
+    
+    <div class="music-player">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3EBtHRt4uSSFhNladqH3UP?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    
+    <div class="counter">
+        <p id="time-together">Estamos juntos há...</p>
+    </div>
+    
+    <div class="footer">
+        <p>Feito com muito carinho por Isabeli para Enzo <3</p>
+    </div>
+    
+    <script>
+        // Contador de tempo juntos
+        function updateCounter() {
+            const startDate = new Date('2025-02-07');
+            const currentDate = new Date();
+            
+            const diffTime = Math.abs(currentDate - startDate);
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const diffHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const diffMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('time-together').innerHTML = 
+                `Estamos juntos há ${diffDays} dias, ${diffHours} horas e ${diffMinutes} minutos ♥`;
+        }
+        
+        // Atualiza o contador a cada minuto
+        updateCounter();
+        setInterval(updateCounter, 60000);
+        
+        // Cria corações flutuantes
+        function createFloatingHearts() {
+            const container = document.getElementById('hearts-container');
+            
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '♥';
+                heart.classList.add('floating-heart');
+                
+                const size = Math.random() * 30 + 10;
+                heart.style.fontSize = `${size}px`;
+                
+                const startPosition = Math.random() * 100;
+                heart.style.left = `${startPosition}%`;
+                
+                const delay = Math.random() * 10;
+                heart.style.animationDelay = `${delay}s`;
+                
+                const duration = Math.random() * 15 + 10;
+                heart.style.animationDuration = `${duration}s`;
+                
+                container.appendChild(heart);
+            }
+        }
+        
+        // Inicia os corações flutuantes
+        createFloatingHearts();
+        
+        // Adiciona efeito de confete ao clicar na página
+        document.addEventListener('click', function(e) {
+            const heart = document.createElement('div');
+            heart.innerHTML = '♥';
+            heart.classList.add('floating-heart');
+            heart.style.fontSize = '30px';
+            heart.style.left = `${e.clientX}px`;
+            heart.style.top = `${e.clientY}px`;
+            heart.style.position = 'fixed';
+            
+            document.getElementById('hearts-container').appendChild(heart);
+        });
+    </script>
+</body>
+</html>
